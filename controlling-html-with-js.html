@@ -1,0 +1,46 @@
+
+
+<head>
+  <body>
+    <h1 class='header-main' id='header-main'>Nice</h1>
+    <p id='text-content'>Hello</p>
+
+    <input type='text' id='input' />
+
+    <button class='btn' id='submit-btn' onclick='changeHeader();'>
+      Submit
+    </button>
+
+    <div>
+      <ul id='list'></ul>
+      <input type='text' id='list-input' />
+      <button class='btn' id='list-btn' onclick='addToList();'>
+        Add To List
+      </button>
+    </div>
+
+    <script>
+      function changeHeader() {
+        document.getElementById('header-main').textContent = document.getElementById('input').value
+      }
+
+      const headerMain = document.getElementsByClassName('header-main')
+      // const headerMain = document.querySelectorAll('.header-main')
+      console.log(headerMain[0].textContent)
+
+      const pTag = document.getElementById('text-content')
+      console.log(pTag.innerHTML)
+
+
+      function addToList() {
+        const inputValue = document.getElementById('list-input').value
+        if (inputValue.length < 1) return
+
+        const listItem = document.createElement('LI')
+        const listItemText = document.createTextNode(inputValue)
+        listItem.appendChild(listItemText)
+        document.getElementById('list').appendChild(listItem)
+      }
+    </script>
+  </body>
+</head>
