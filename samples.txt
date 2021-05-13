@@ -1,0 +1,71 @@
+
+my_list = [1,2,3, 'hello', 'world', 5.0, 6.0]
+string_list = [item for item in my_list if (type(item) is str)]
+
+
+myList.filter(item => (typeof(item) === 'string'))
+
+# FIFO - First In, First Out
+class Queue:
+    def __init__(self):
+        self.queue = []
+    
+    def push(self, item):
+        self.queue.append(item)
+    
+    def pop(self):
+        if (len(self.queue) < 1):
+            print ('Queue is currently empty.')
+            return
+        self.queue = self.queue[1:]
+    
+    def check(self):
+        print ('Currently the queue is: {}'.format(self.queue))
+        
+my_queue = Queue()
+my_queue.push('Milk')
+my_queue.push('Eggs')
+my_queue.check()            # ['Milk', 'Eggs']
+my_queue.pop()
+my_queue.check()            # ['Eggs']
+my_queue.pop()
+my_queue.check()            # []
+my_queue.pop()              # 'Queue is currently empty.'
+
+
+/*
+class Queue {
+  constructor() {
+  	this.queue = []
+  }
+  
+  push(item) {
+  	this.queue.push(item)
+  }
+  
+  pop() {
+  	if (this.queue.length < 1) {
+    	console.log('Queue is currently empty.')
+      return
+    }
+    this.queue = this.queue.slice(1)
+  }
+  
+  check() {
+  	console.log(this.queue)
+  }
+}
+
+const my_queue = new Queue()
+my_queue.push('Milk')
+my_queue.push('Eggs')
+my_queue.check()            // ['Milk', 'Eggs']
+my_queue.pop()
+my_queue.check()            // ['Eggs']
+my_queue.pop()
+my_queue.check()            // []
+my_queue.pop()              // 'Queue is currently empty.'
+*/
+
+// TODO for everyone: Re-implement this with Stacks
+// Stack - LIFO

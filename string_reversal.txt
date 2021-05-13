@@ -1,0 +1,26 @@
+
+
+
+# python
+def reverse(word):
+  arr = [char for char in word]
+  arr.reverse()
+  return ''.join(arr)
+    
+word = 'hello'
+word_reversed = reverse(word)
+print (word_reversed)
+
+// javascript
+const reverse = (word) => {
+  const wordArray = word.split('')
+  const wordArrayReversed = wordArray.reverse()
+  const wordReversed = wordArrayReversed.join('')
+  return wordReversed
+}
+
+const word = 'hello'
+reverse(word)
+
+
+// These methods can be used to help check palindromes

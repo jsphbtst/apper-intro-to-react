@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Hello world</title>
+  </head>
+
+  <body>
+    <script>
+      const increment = () => {
+        const currentCountText = document.getElementById('counter').innerHTML
+        const currentCountNum = parseFloat(currentCountText)
+        const incrementedNumber = currentCountNum + 1
+        document.getElementById('counter').innerHTML = incrementedNumber
+      }
+
+      const decrement = () => {
+        const currentCountText = document.getElementById('counter').innerHTML
+        const currentCountNum = parseFloat(currentCountText)
+        const decrementedNumber = currentCountNum - 1
+        document.getElementById('counter').innerHTML = decrementedNumber
+      }
+    </script>
+
+    <h1>hello world</h1>
+    <p>counter: <span id="counter">0</span></p>
+
+    <button onclick="increment();">increment</button>
+
+    <button onclick="decrement();">decrement</button>
+  </body>
+</html>

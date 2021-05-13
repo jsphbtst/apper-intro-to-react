@@ -1,0 +1,47 @@
+
+
+Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+
+# python
+def fizzbuzz(number):
+  is_multiple_of_five = number % 5 == 0
+  is_multiple_of_three = number % 3 == 0
+  is_multiple_of_three_and_five = is_multiple_of_five & is_multiple_of_three
+  
+  if is_multiple_of_three_and_five:
+    print ('FizzBuzz')
+    return
+  
+  if is_multiple_of_five:
+    print ('Buzz')
+    return
+
+  if is_multiple_of_three:
+    print ('Fizz')
+    return
+
+// javascript
+function fizzbuzz(number) {
+  const isMultipleOfFive = number % 5 === 0
+  const isMultipleOfThree = number % 3 === 0
+  const isMultipleOfThreeAndFive = isMultipleOfThree && isMultipleOfFive
+
+  if (isMultipleOfThreeAndFive) {
+    return 'FizzBuzz'
+  }
+
+  if (isMultipleOfFive) {
+    return 'Buzz'
+  }
+
+  if (isMultipleOfThree) {
+    return 'Fizz'
+  }
+}
+
+fizzbuzz(3)   // Fizz
+fizzbuzz(5)   // Buzz
+fizzbuzz(6)   // Fizz
+fizzbuzz(9)   // Fizz
+fizzbuzz(15)  // FizzBuzz
+fizzbuzz(30)  // FizzBuzz
